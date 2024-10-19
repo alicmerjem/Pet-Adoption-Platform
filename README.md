@@ -1,1 +1,2 @@
 # Pet-Adoption-Platform
+The Pet Adoption Platform is a web application designed to connect potential pet adopters with animals in need of a loving home. Users can register to adopt pets and log in to their accounts.
