@@ -8,27 +8,48 @@
 <body>
 
     <h2 style="text-align: center;">Register now!</h2>
-    <form style="text-align: center;" method="post">
+    <form action="https://jsonplaceholder.typicode.com/posts" style="text-align: center;" method="POST">
 
         <label for="fname">First name: </label>
-        <input type="text" id="fname" name="fname"> <br>
+        <input type="text" id="fname" name="fname"> <br> <br>
 
         <label for="lname">Last name: </label>
-        <input type="text" id="lname" name="lname"> <br>
+        <input type="text" id="lname" name="lname"> <br> <br>
 
         <label for="email">Email: </label>
-        <input type="text" id="email" name="email"> <br>
+        <input type="email" id="email" name="email"> <br> <br>
 
         <label for="phonenum">Phone number: </label>
-        <input type="tel" id="phonenum" name="phonenum"> <br>
+        <input type="tel" id="phonenum" name="phonenum"> <br> <br>
 
         <label for="age">Age: </label>
-        <input type="number" id="age" name="age" min="18" required> <br>
+        <input type="number" id="age" name="age" min="18"> <br> <br>
+        <!--Add the required attribute later-->
 
         <label for="password">Password: </label>
-        <input type="password" id="password" name="password"> <br>
+        <input type="password" id="password" name="password"> <br> <br>
 
-        <input type="submit" value="Register"> <br>
+        <label for="experience">Experience level:</label>
+        <select id="experience" name="experience">
+            <option value="">Select your experience level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select> <br> <br>
+
+        <label for="otherPets">Do you have other pets?</label>
+        <input type="radio" id="otherPetsYes" name="otherPets" value="yes" required>
+        <label for="otherPetsYes">Yes</label>
+        <input type="radio" id="otherPetsNo" name="otherPets" value="no">
+        <label for="otherPetsNo">No</label><br><br>
+
+        <label for="reason">Why do you want to adopt?</label> <br>
+        <textarea id="reason" name="adoptionReason" rows="4" cols="50"></textarea><br><br>
+
+        <label for="newsletter">Sign me up for the newsletter!</label>
+        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"><br><br>
+
+        <input type="submit" value="Register"> <br> <br>
 
         <p><a href="login.html">Already have an account? Log in.</a></p>
     </form>
