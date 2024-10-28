@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <nav>
+        <a href="registration.html">Registration</a>
+        <a href="login.html">Log In</a>
+        <a href="intropage.html">Discover</a>
+        <a href="mainpage.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <h1 style="text-align: center;">Any issues, suggestions?</h1>
+        <h1 style="text-align: center;">Contact us now</h1>
+    </header>
+
+    <form method="POST" action="https://jsonplaceholder.typicode.com/posts" style="text-align: center;">
+        <label for="fullname">Full Name: </label>
+        <input type="text" id="fullname" name="fullname"> <br> <br>
+
+        <label for="gmail">Enter your email:</label>
+        <input type="email" id="gmail" name="gmail"> <br> <br>
+
+        <label for="issue">Type of Issue: </label>
+        <input type="text" id="issue" name="issue"> <br> <br>
+
+        <label for="issue">Describe the issue you have encountered:</label> <br>
+        <textarea id="issue" name="issue" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations of the Web Development</p>
+        <p>Created by: Merjem Alić</p>
+    </footer>
+</body>
+</html>
