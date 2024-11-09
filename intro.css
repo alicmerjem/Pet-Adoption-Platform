@@ -67,3 +67,60 @@ header button {
 header button:hover {
     background-color: whitesmoke; /* Change background color on hover */
 }
+
+section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url(images/image2.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    min-height: 300px;
+    justify-content: space-between;
+}
+
+.image-content {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    height: 450px; /* Increased height for larger images */
+    width: 10%; /* Adjust if you want to change image width */
+}
+
+.text-content, .image-content {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Left-aligned image, right-aligned text */
+.left .text-content {
+    order: 1;
+}
+.left .image-content {
+    order: 2;
+}
+
+/* Right-aligned image, left-aligned text */
+.right .text-content {
+    order: 2;
+}
+.right .image-content {
+    order: 1;
+}
+
+.success-stories .image-content {
+    background-image: url('images/successstories.jpg'); 
+}
+
+.meet-our-pets .image-content {
+    background-image: url('images/meetourpets.jpg'); 
+}
+
+.volunteer-opportunities .image-content {
+    background-image: url('images/volunteer.jpg');
+}
