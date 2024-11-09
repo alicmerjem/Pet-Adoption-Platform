@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #0059b3;
+}
+
 nav {
     background-color: white;
     padding: 1em;
@@ -19,6 +23,7 @@ nav a {
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav a:hover {
@@ -123,4 +128,95 @@ section {
 
 .volunteer-opportunities .image-content {
     background-image: url('images/volunteer.jpg');
+}
+
+.free-vet-visits .image-content {
+    background-image: url('images/vetclinic.jpg');
+}
+
+footer {
+    background-color: #0f1f3d; 
+    color: #f1f1f1;
+    text-align: center;
+    padding: 60px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+/* Mobile Devices (up to 600px) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack the navigation links vertically */
+    }
+
+    nav a {
+        margin: 10px 0; /* Add vertical spacing */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    header {
+        padding: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    section {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 20px;
+    }
+
+    .text-content, .image-content {
+        width: 100%; /* Full width for each content block */
+        padding: 10px;
+    }
+
+    .image-content {
+        height: 250px; /* Reduce image height for mobile */
+    }
+
+    footer {
+        font-size: 16px; /* Adjust footer font size for readability */
+        padding: 20px;
+    }
+}
+
+/* Tablets (up to 900px) */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 17px; /* Slightly smaller font */
+    }
+
+    section {
+        flex-direction: column; /* Stack content vertically */
+        padding: 30px;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .image-content {
+        height: 350px; /* Moderate image height for tablet screens */
+    }
+
+    footer {
+        padding: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 901px) {
+    /* Default desktop styles can remain as-is */
 }
