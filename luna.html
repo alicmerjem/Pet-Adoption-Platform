@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="max.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Meet Luna - Pet Adoption Platform</title>
+
+    <style>
+        /* Custom CSS to set a consistent logo size */
+        .navbar-brand img {
+            width: 50px;  /* Adjust the size as needed */
+            height: 50px; /* Keep it square */
+            border-radius: 50%;  /* Makes the logo round */
+            margin-right: 10px;  /* Space between logo and name */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section using Bootstrap -->
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">
+                <img src="images/logo.png" alt="PetLink Logo">
+                PetLink
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container with Background -->
+    <div class="container my-4 content-container">
+
+        <!-- Animal Section with Image and Description Side by Side -->
+        <section class="animal-profile row align-items-center">
+            <div class="col-md-4 animal-image">
+                <img src="/images/rabbit1.jpg" alt="Max the parrot" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8 animal-description">
+                <h1 style="color: #0f1f3d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Meet Luna</h1>
+                <p>Luna is a sweet, gentle 2-year-old black and white rabbit with a calm demeanor and a curious nature. She loves hopping around and exploring her surroundings, especially when it comes to finding a cozy spot to relax. Luna is a friendly companion and enjoys being gently petted and given plenty of attention.</p>
+                <p>Her striking black and white fur makes her stand out, but it’s her sweet personality that truly shines. Luna is looking for a loving home where she can receive lots of cuddles and care!</p>
+            </div>
+        </section>
+
+        <!-- Details Section (Table) -->
+        <section class="details-section my-4">
+            <h2>Luna's Profile</h2>
+            <table class="table table-striped">
+                <tr><th>Attribute</th><th>Details</th></tr>
+                <tr><td>Age</td><td>2 years</td></tr>
+                <tr><td>Breed</td><td>Holland Lop</td></tr>
+                <tr><td>Gender</td><td>Female</td></tr>
+                <tr><td>Size</td><td>Medium</td></tr>
+                <tr><td>Vaccinations</td><td>Up-to-date</td></tr>
+            </table>
+        </section>
+
+        <!-- Care Requirements Section -->
+        <section class="care-requirements my-4">
+            <h2>Care Requirements</h2>
+            <ul>
+                <li>A spacious area to hop around and explore</li>
+                <li>Fresh hay, vegetables, and water daily</li>
+                <li>Gentle interaction and handling</li>
+                <li>Regular grooming to keep her coat healthy</li>
+                <li>Safe, quiet environment away from loud noises</li>
+            </ul>
+        </section>
+
+        <!-- Optional Fun Facts Section -->
+        <section class="fun-facts my-4">
+            <h2>Fun Facts About Luna</h2>
+            <ul>
+                <li>Luna loves to dig through soft bedding, making little burrows.</li>
+                <li>She has a favorite toy: a small stuffed carrot that she loves to nudge around.</li>
+                <li>Though she enjoys quiet moments, Luna is also very curious and loves exploring new places.</li>
+            </ul>
+        </section>
+
+        <!-- Adoption Information Section -->
+        <section class="adoption-info-section my-4">
+            <h2>Adoption Information</h2>
+            <p><strong>Adoption Fee:</strong> $60 (includes vaccination and food supplies)</p>
+            <p>To adopt Luna, please fill out our <a href="adoption_form.html">Adoption Form</a> and review our adoption requirements.</p>
+        </section>
+
+    </div> <!-- End of Content Container -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
