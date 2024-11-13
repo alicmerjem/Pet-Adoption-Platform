@@ -93,8 +93,14 @@ section {
     background-size: cover;
     background-position: center;
     border-radius: 8px;
-    height: 450px; /* Increased height for larger images */
-    width: 10%; /* Adjust if you want to change image width */
+    height: 450px; 
+    width: 10%; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-content.visible {
+    opacity: 1;
 }
 
 .text-content, .image-content {
