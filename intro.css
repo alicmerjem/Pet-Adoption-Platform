@@ -6,6 +6,10 @@
 
 body {
     background-color: #0059b3;
+    background-image: url('images/mainimg.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -28,6 +32,11 @@ nav a {
 
 nav a:hover {
     color: #0056b3; /* Lighter blue for hover effect */
+}
+
+.navbar-nav .nav-link.active {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 header {
@@ -157,12 +166,12 @@ footer p {
 /* Mobile Devices (up to 600px) */
 @media (max-width: 600px) {
     nav {
-        flex-direction: column; /* Stack the navigation links vertically */
+        flex-direction: column; 
     }
 
     nav a {
-        margin: 10px 0; /* Add vertical spacing */
-        font-size: 16px; /* Adjust font size */
+        margin: 10px 0; 
+        font-size: 16px; 
     }
 
     header {
@@ -172,21 +181,21 @@ footer p {
     }
 
     section {
-        flex-direction: column; /* Stack text and image vertically */
+        flex-direction: column; 
         padding: 20px;
     }
 
     .text-content, .image-content {
-        width: 100%; /* Full width for each content block */
+        width: 100%; 
         padding: 10px;
     }
 
     .image-content {
-        height: 250px; /* Reduce image height for mobile */
+        height: 250px; 
     }
 
     footer {
-        font-size: 16px; /* Adjust footer font size for readability */
+        font-size: 16px; 
         padding: 20px;
     }
 }
@@ -194,16 +203,16 @@ footer p {
 /* Tablets (up to 900px) */
 @media (max-width: 900px) {
     nav {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-direction: column;
     }
 
     nav a {
         margin: 10px 0;
-        font-size: 17px; /* Slightly smaller font */
+        font-size: 17px; 
     }
 
     section {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; 
         padding: 30px;
     }
 
@@ -213,7 +222,7 @@ footer p {
     }
 
     .image-content {
-        height: 350px; /* Moderate image height for tablet screens */
+        height: 350px;
     }
 
     footer {
@@ -224,5 +233,4 @@ footer p {
 
 /* Large Screens */
 @media (min-width: 901px) {
-    /* Default desktop styles can remain as-is */
 }
