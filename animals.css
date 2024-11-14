@@ -8,8 +8,9 @@ body {
 /* Navbar styling */
 nav.navbar {
     background-color: white;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav.navbar a {
