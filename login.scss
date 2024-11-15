@@ -27,7 +27,7 @@ nav.navbar {
 }
 
 nav.navbar a {
-    color: darkblue;
+    color: #0f1f3d;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
@@ -37,6 +37,16 @@ nav.navbar a {
 
 nav.navbar a:hover {
     color: #0056b3;
+}
+
+nav.navbar .navbar-nav .nav-item .nav-link.active {
+    color:#0056b3; /* Bootstrap's primary blue color */
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-link.active {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* Form container */
