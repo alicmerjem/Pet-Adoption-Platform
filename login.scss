@@ -58,15 +58,20 @@ nav.navbar a:hover {
     width: 100%; /* Ensure the card fills the container */
 }
 
-/* Footer */
 footer {
     background-color: #0f1f3d;
     color: #f1f1f1;
     text-align: center;
-    padding: 20px;
-    font-size: 16px;
+    padding: 60px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: auto;
 }
+
+footer p {
+    margin: 5px 0;
+}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {

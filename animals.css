@@ -3,6 +3,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0f1f3d;
     background-image: url('images/mainimg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Navbar styling */
@@ -128,4 +131,17 @@ h2 {
     .animal-profile {
         flex-direction: column;
     }
+}
+
+footer {
+    background-color: #0f1f3d; 
+    color: #f1f1f1;
+    text-align: center;
+    padding: 60px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
 }
