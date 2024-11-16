@@ -108,6 +108,7 @@ section {
     transition: opacity 1s ease-in-out;
 }
 
+
 .image-content.visible {
     opacity: 1;
 }
@@ -233,4 +234,36 @@ footer p {
 
 /* Large Screens */
 @media (min-width: 901px) {
+}
+
+@supports (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/mainimg.avif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header{
+        background-image: url('images/mainimg.avif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@supports not (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    header{
+        background-image: url('images/image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }

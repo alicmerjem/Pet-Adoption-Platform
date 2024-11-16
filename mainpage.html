@@ -127,8 +127,30 @@
 
         @media (min-width: 768px) and (max-width: 1024px) {
         .container {
-        padding-top: 20px; /* Adjust as needed */
+        padding-top: 20px; 
     }
+
+    /* Checking for browser support for the avif extension */
+
+    @supports (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/mainimg.avif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@supports not (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
 }
 
 .row {
@@ -178,7 +200,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="fluffy.html">
-                    <img src="images/cat1.jpg" alt="Fluffy">
+                    <img src="images/cat1.jpg" alt="Fluffy the cat">
                     <div>
                         <h5>Fluffy</h5>
                         <p>A gentle, calm and affectionate cat. She loves quiet afternoons spent napping in sunny spots and cuddling with her humans.</p>
@@ -189,7 +211,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="bella.html">
-                    <img src="images/dog2.avif" alt="Pet 2">
+                    <img src="images/dog2.avif" alt="Bella the dog">
                     <div>
                         <h5>Bella</h5>
                         <p>A playful and lenergetic dog, full of loyalty. She's always up for a game of fetch or a walk in the park. </p>
@@ -200,7 +222,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="max.html">
-                    <img src="images/parrot1.jpg" alt="Pet 3">
+                    <img src="images/parrot1.jpg" alt="Max the parrot">
                     <div>
                         <h5>Max</h5>
                         <p>A lively parrot with beautiful, colorful feathers and a knack for mimicking sounds. He loves socializing and showing off his tricks.</p>
@@ -211,7 +233,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="luna.html">
-                    <img src="images/rabbit1.jpg" alt="Pet 4">
+                    <img src="images/rabbit1.jpg" alt="Luna the rabbit">
                     <div>
                         <h5>Luna</h5>
                         <p>A gentle rabbit with a soft coat, who loves munching on fresh greens. She enjoys exploring her sorroundings and relaxing with humans.</p>
@@ -222,7 +244,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="oliver.html">
-                    <img src="images/hamster21.jpg" alt="Pet 5">
+                    <img src="images/hamster21.jpg" alt="Oliver the hamster">
                     <div>
                         <h5>Oliver</h5>
                         <p>A curious little hamster with a lot of energy and love for burrowing. He is the happiest when exploring tiny spaces and nibbling on treats.</p>
@@ -233,7 +255,7 @@
         <div class="col-md-4 col-sm-6">
             <div class="pet-card">
                 <a href="daisy.html">
-                    <img src="images/doggo2.jpg" alt="Pet 6">
+                    <img src="images/doggo2.jpg" alt="Daisy the dog">
                     <div>
                         <h5>Daisy</h5>
                         <p>A friendly and affectionate dog with a gentle temperament. She loves spending time wth people and going on walks.</p>
@@ -247,7 +269,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 PetLink. All rights reserved.</p>
-        <p>Course: Foundations of Web Development</p>
+        <p>Course: Foundations Web Development</p>
         <p>Created by: Merjem Alić</p>
     </footer>
 

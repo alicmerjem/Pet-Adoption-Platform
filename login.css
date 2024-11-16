@@ -92,4 +92,21 @@ footer p {
     width: 90%;
     padding: 15px;
   }
+}
+/* Checking for browser support for the avif extension */
+@supports (background-image: url("images/mainimg.avif")) {
+  body {
+    background-image: url("images/mainimg.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@supports not (background-image: url("images/mainimg.avif")) {
+  body {
+    background-image: url("images/image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }/*# sourceMappingURL=login.css.map */

@@ -145,3 +145,23 @@ footer {
 footer p {
     margin: 10px 0;
 }
+
+/* Checking for browser support for the avif extension */
+
+@supports (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/mainimg.avif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@supports not (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
