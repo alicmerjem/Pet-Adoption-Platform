@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PetLink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+
+        body{
+            background-image: url('/images/mainimg.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Navbar Styling */
+        nav.navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            padding: 1em
+        }
+
+        nav.navbar a {
+            color: #0f1f3d;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav.navbar a:hover {
+            color: #0056b3;
+        }
+
+        nav .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* General Page Styling */
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #0f1f3d;
+        }
+
+        h1, h2 {
+            color: #0f1f3d;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #0f1f3d;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        /* Links & Buttons Styling */
+        .links a {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #0059ff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .links a:hover {
+            background-color: #0041c3;
+        }
+
+        form .form-control {
+            border-radius: 5px;
+        }
+
+        form .btn-primary {
+            background-color: #0059ff;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        form .btn-primary:hover {
+            background-color: #0041c3;
+        }
+
+        footer {
+            background-color: #0f1f3d; 
+            color: #f1f1f1;
+            text-align: center;
+            padding: 60px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: white;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1, h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            form .form-control {
+                font-size: 0.9rem;
+            }
+
+            .links a {
+                font-size: 14px;
+            }
+        }
+
+        /* Checking for browser support for the avif extension */
+
+        @supports (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/mainimg.avif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@supports not (background-image: url('images/mainimg.avif')) {
+    body{
+        background-image: url('images/image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">
+                PetLink
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Main Section -->
+    <div class="container">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        <p class="text-center mb-4">If you have any questions or want more information, feel free to contact us using the form below. We’re here to help!</p>
+
+        <!-- Contact Form -->
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </form>
+
+        <!-- Contact Information and Links Section -->
+        <h2 class="text-center mt-5 mb-3">Contact Information & Useful Links</h2>
+        <p class="text-center mb-4">We offer various resources and information through these links:</p>
+        
+        <!-- Links -->
+        <div class="links mb-4">
+            <a href="https://www.petfinder.com" target="_blank">Visit Petfinder</a>
+            <a href="https://mercerislandvet.com/?gad_source=1&gclid=Cj0KCQiAouG5BhDBARIsAOc08RQuYlxWLefrImjA9LKp3PTd9q-IQcZaKEisIxaTJnQnwO_hC_FkIiAaAoOXEALw_wcB" target="_blank">Visit our Partnered Pet Clinic</a>
+            <a href="https://www.petco.com" target="_blank">Visit Petco</a>
+        </div>
+
+        <p class="text-center">For any other inquiries, feel free to reach out by clicking the button below to email us directly:</p>
+
+        <!-- Email Button -->
+        <div class="text-center mt-3">
+            <a href="mailto:amela.vatres@stu.ibu.edu.ba" class="btn btn-primary">Send Email</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations of Web Development</p>
+        <p>Created by: Merjem Alić</p>
+    </footer>
+
+
+</body>
+</html>
