@@ -72,6 +72,23 @@
             margin: 5px 0;
         }
 
+        .strength-indicator {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .weak{
+            color: red;
+        }
+
+        .medium{
+            color: orange;
+        }
+
+        .strong{
+            color: green;
+        }
+
         @supports (background-image: url('images/mainimg.avif')) {
     body{
         background-image: url('images/mainimg.avif');
@@ -161,13 +178,14 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="age" class="form-label">Age:</label>
-                    <input type="number" id="age" name="age" class="form-control" min="18" required>
+                    <label for="age" class="form-label">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" class="form-control" min="18" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="password" class="form-label">Password:</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
+                    <input type="password" id="password" name="password" class="form-control" onkeyup="updatePasswordStrength()" required>
+                    <div id="strength-indicator" class="strength-indicator"></div>
                 </div>
 
                 <div class="mb-3">
@@ -213,6 +231,10 @@
         <p>Course: Foundations of Web Development</p>
         <p>Created by: Merjem Alić</p>
     </footer>
+
+    <script src="registration.js"></script>
+    <script src="password.js"></script>
+    <script src="email.js"></script>
 
 </body>
 </html>
