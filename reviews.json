@@ -1,0 +1,20 @@
+[
+    {
+        "name": "John Doe",
+        "pet_name": "Max",
+        "rating": 5,
+        "text": "Max is a wonderful dog, and the adoption process was seamless. PetLink made everything so easy!"
+    },
+    {
+        "name": "Jane Smith",
+        "pet_name": "Bella",
+        "rating": 4,
+        "text": "Bella is an amazing cat! The platform was very helpful, but the website could use a few improvements."
+    },
+    {
+        "name": "Mike Johnson",
+        "pet_name": "Buddy",
+        "rating": 5,
+        "text": "Buddy has been the best companion! The adoption process was quick, and I couldn't be happier."
+    }
+]
