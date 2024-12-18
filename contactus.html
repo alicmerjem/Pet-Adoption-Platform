@@ -11,10 +11,17 @@
 
         body{
             background-image: url('/images/mainimg.avif');
-            background-position: center;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: fixed;
         }
+
+        #newsSection {
+        max-height: 500px;  /* Limiting the height of the news section */
+        overflow-y: auto;   /* Makes the section scrollable if there are many articles */
+        }
+
         /* Navbar Styling */
         nav.navbar {
             background-color: white;
@@ -228,12 +235,39 @@
         </div>
     </div>
 
+    <div class="container" id="newsSection">
+        <h2 class="text-center mt-2 mb-3">Latest News</h2>
+        <div id="newsArticles" class="list-group">
+            <!-- News articles will be populated here -->
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 PetLink. All rights reserved.</p>
         <p>Course: Foundations of Web Development</p>
         <p>Created by: Merjem Alić</p>
     </footer>
+
+
+    <script>
+         const newsContainer = document.getElementById('newsArticles');
+        
+        fetch('https://newsapi.org/v2/everything?q=pets&apiKey=357cd5b0e4dd4394bc949229bce2bb39')
+            .then(response => response.json())
+            .then(data => {
+                const articles = data.articles;
+                articles.forEach(article => {
+                    const articleElement = document.createElement('a');
+                    articleElement.href = article.url;
+                    articleElement.target = '_blank';
+                    articleElement.classList.add('list-group-item', 'list-group-item-action');
+                    articleElement.innerHTML = `<strong>${article.title}</strong><p>${article.description}</p>`;
+                    newsContainer.appendChild(articleElement);
+                });
+            })
+            .catch(error => console.error('Error fetching news:', error));
+    </script>
 
 
 </body>
