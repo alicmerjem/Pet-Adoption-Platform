@@ -253,7 +253,7 @@
     <script>
          const newsContainer = document.getElementById('newsArticles');
         
-        fetch('https://newsapi.org/v2/everything?q=pets&apiKey=357cd5b0e4dd4394bc949229bce2bb39')
+        fetch('https://newsapi.org/v2/everything?q="pet adoption"&apiKey=357cd5b0e4dd4394bc949229bce2bb39')
             .then(response => response.json())
             .then(data => {
                 const articles = data.articles;
