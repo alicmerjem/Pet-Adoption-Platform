@@ -110,6 +110,8 @@
                 <button class="accordion-button">What is PetLink?</button>
                 <div class="accordion-content">
                     PetLink is a platform for adopting pets in your local area. You can browse through the available animals and find your perfect companion.
+                    <br><br>
+                    <button id="view-more-btn" class="btn btn-link">View More</button>
                 </div>
             </div>
             <div class="accordion-item">
@@ -152,6 +154,10 @@
     </footer>
 
     <script>
+
+document.getElementById("view-more-btn").addEventListener("click", function() {
+    window.location.href = "aboutus.html"; // Redirect to About Us page
+});
         // js for accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion-button');
         
