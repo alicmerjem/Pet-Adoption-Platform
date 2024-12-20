@@ -20,6 +20,26 @@ nav {
     border-bottom: 2px solid #ccc;
 }
 
+
+body.dark-mode{
+    background-image: url('images/darkimage.png');
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #b0b0b0;
+}
+
 nav a {
     color: darkblue;
     text-decoration: none;
@@ -57,6 +77,13 @@ header {
     align-items: center;          /* Center items horizontally */
     text-align: center;           /* Center text */
     color: white; 
+}
+
+header.dark-mode{
+    background-image: url('images/darkimage.png');
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
 }
 
 header h1{
@@ -97,6 +124,12 @@ section {
     min-height: 300px;
     justify-content: space-between;
 }
+
+/* section.dark-mode{
+    background-image: url('images/darkimage2.png');
+    background-position: center;
+    background-size: cover;
+} */
 
 .image-content {
     background-size: cover;

@@ -39,9 +39,27 @@
             color: #0056b3;
         }
 
-        .navbar-nav .nav-link.active {
-        color: #0056b3;
-        text-decoration: underline;
+        .theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
         }
 
      </style>
@@ -63,6 +81,8 @@
                 <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                <li class="nav-time"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
             </ul>
         </div>
     </div>
@@ -124,6 +144,8 @@
         <p>Created by: Merjem Alić</p>
         <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
     </footer>
+
+    <script src="darkmode.js" defer></script>
 
 </body>
 </html>

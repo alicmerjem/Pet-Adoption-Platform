@@ -99,6 +99,54 @@
                 padding: 15px;
             }
         }
+
+        body.dark-mode{
+    background-image: url('images/darkimage.png');
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #b0b0b0;
+} 
+
+.theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
+        }
+
+        body.dark-mode{
+            background-image: url('images/darkimage.png');
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
@@ -116,7 +164,8 @@
                     <li class="nav-item"><a class="nav-link" href="intropage.html">Discover</a></li>
                     <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="reviews.html">User Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
                 </ul>
             </div>
         </div>
@@ -194,5 +243,7 @@ $(document).ready(function() {
         });
     });
     </script>
+
+    <script src="darkmode.js" defer></script>
 </body>
 </html>
