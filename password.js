@@ -1,36 +1,20 @@
-// check pass strength
 function checkPasswordStrength(password) {
-    let strength = '';
-    const length = password.length;
-
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumbers = /\d/.test(password);
-    const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-
-    // weak
-    if (length < 6 || !(hasUpperCase || hasLowerCase) || !hasNumbers) {
-        strength = 'weak';
+    if (password.length >= 8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        return 'strong';
+    } else if (password.length >= 6 && /[A-Z]/.test(password) && /[a-z]/.test(password)) {
+        return 'medium';
+    } else {
+        return 'weak';
     }
-    // medium
-    else if (length >= 6 && length < 8 && (hasUpperCase || hasLowerCase) && hasNumbers) {
-        strength = 'medium';
-    }
-    // strong
-    else if (length >= 8 && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars) {
-        strength = 'strong';
-    }
-    return strength;
 }
 
-// event listener for password input
 function updatePasswordStrength() {
     const password = document.getElementById('password').value;
     const strength = checkPasswordStrength(password);
     const strengthIndicator = document.getElementById('strength-indicator');
-    const passwordCriteria = document.getElementById('password-criteria'); // Ensure this exists in the HTML
+    const passwordCriteria = document.getElementById('password-criteria');
 
-    // update the strength indicator
+    // Update the strength indicator
     strengthIndicator.textContent = `Password Strength: ${strength}`;
     if (strength === 'weak') {
         strengthIndicator.className = 'strength-indicator weak';
@@ -40,24 +24,22 @@ function updatePasswordStrength() {
         strengthIndicator.className = 'strength-indicator strong';
     }
 
-    // checking password criteria
+    // Check password criteria
     let criteriaMessage = "";
+
+    // Show only the first unmet condition
     if (password.length < 6) {
-        criteriaMessage += "<p>Password must be at least 6 characters long.</p>";
-    }
-    if (!/[A-Z]/.test(password)) {
-        criteriaMessage += "<p>Password must contain at least one uppercase letter.</p>";
-    }
-    if (!/[a-z]/.test(password)) {
-        criteriaMessage += "<p>Password must contain at least one lowercase letter.</p>";
-    }
-    if (!/\d/.test(password)) {
-        criteriaMessage += "<p>Password must contain at least one number.</p>";
-    }
-    if (!/[!@#$%^&*(),.?\":{}|<>]/.test(password)) {
-        criteriaMessage += "<p>Password must contain at least one special character.</p>";
+        criteriaMessage = "<p>Password must be at least 6 characters long.</p>";
+    } else if (!/[A-Z]/.test(password)) {
+        criteriaMessage = "<p>Password must contain at least one uppercase letter.</p>";
+    } else if (!/[a-z]/.test(password)) {
+        criteriaMessage = "<p>Password must contain at least one lowercase letter.</p>";
+    } else if (!/\d/.test(password)) {
+        criteriaMessage = "<p>Password must contain at least one number.</p>";
+    } else if (!/[!@#$%^&*(),.?\":{}|<>]/.test(password)) {
+        criteriaMessage = "<p>Password must contain at least one special character.</p>";
     }
 
-    // displaying the criteria message
+    // Display the first unmet criteria message
     passwordCriteria.innerHTML = criteriaMessage;
 }

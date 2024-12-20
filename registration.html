@@ -89,6 +89,13 @@
             color: green;
         }
 
+        #password-criteria {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #e74c3c; /* Red color for warnings */
+        }
+
+
         @supports (background-image: url('images/mainimg.avif')) {
     body{
         background-image: url('images/mainimg.avif');
@@ -186,7 +193,7 @@
                     <label for="password" class="form-label">Password:</label>
                     <input type="password" id="password" name="password" class="form-control" onkeyup="updatePasswordStrength()" required>
                     <div id="strength-indicator" class="strength-indicator"></div>
-                    <div id="password-critera" class="text-danger mt-2"></div>
+                    <div id="password-criteria" class="text-danger mt-2"></div>
                 </div>
 
                 <div class="mb-3">
