@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+         body {
+            background-image: url('images/mainimg.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav.navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            padding: 1em;
+        }
+
+        nav.navbar a {
+            color: #0f1f3d;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+
+        nav.navbar a:hover {
+            color: #0056b3;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0f1f3d;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 60px;
+            font-size: 20px;
+            margin: 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            color: #0f1f3d;
+        }
+
+        button{
+            color: white;
+            background-color: #0056b3;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        button:active{
+            background-color: #003374;
+            box-shadow: 0 5px #666;
+            transform: translateY(2px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">PetLink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align: center; padding-bottom: 10px;">Terms and Conditions</h2>
+
+        <h3>Introduction</h3>
+        <p>Welcome to PetLink! These Terms and Conditions ("Terms") govern your use of our website and services. By accessing or using the PetLink platform, you agree to comply with these Terms.</p>
+
+        <h3>Acceptance of Terms</h3>
+        <p>By using PetLink, you agree to be bound by these terms. If you do not agree with any part of these Terms, you must discountinue use of the website immediately.</p>
+
+        <h3>Eligibility</h3>
+        <p>You must be at least 18 years old to use PetLink and register an account. If you are under 18, you may only use PetLink with the consent of a parent or guardian.</p>
+
+
+        <h3>Account Responsibilities</h3>
+        <p>As a user, you are responsible for managing your account credentials securely. Click "Show More" for detailed guidelines.</p>
+        <button id="toggleResponsibilities">Show More</button>
+        <div id="responsibilitiesSection" style="display: none;">
+            <p>You are responsible for maintaining the confidentiality of your account credentials and for all activites that occur under your account. You agree to immediately notify us of any unathorized use of your account.</p>
+        </div>
+
+        <h3 style="padding-top: 20px;">Use of the Platform</h3>
+        <p>Users are permitted to browse, search, and adopt pets via the platform. You must not use the platform for any unlawful or harmful activites, including spamming, fraud, or harassment.</p>
+
+
+        <h3>Adoption Process</h3>
+        <p>Learn how to adopt pets through our platform. Click "Show More" to see detailed steps and requirements.</p>
+        <button id="toggleAdoption">Show More</button> <br>
+        <div id="adoptionSection" style="display: none">
+            <p>To adopt a pet, users must:</p>
+            <ul>
+                <li>Complete the registration process</li>
+                <li>Submit the required documents</li>
+                <li>Adhere to the adoption guidelines set by PetLink.</li>
+                <p>Adoption fees may apply, depending on the pet's care needs.</p>
+            </ul>
+        </div>
+
+        <h3 style="padding-top: 20px;">Fees</h3>
+        <p>Adoption fees cover the costs of pet care and medical treatments. Click "Show More" to learn about fee details.</p>
+        <button id="toggleFees">Show More</button>
+        <div id="feesSection" style="display:none;">
+            <p>Adoption fees are required to cover the following:</p>
+            <ul>
+                <li>Cost of pet care</li>
+                <li>Costs of vaccinations</li>
+                <li>Costs of medical treatments</li>
+            </ul>
+            <p>These fees will be discloded during the adoption process.</p>
+        </div>   
+
+        <h3 style="padding-top: 20px;">Conduct on the Platform</h3>
+        <p>You agree to engage respectfully and responsibly with other users and adhere to the platform’s rules. Any abusive or inappropriate behavior will result in termination of access.</p>
+
+        <h3>Content Ownership</h3>
+    <p>All content uploaded to the platform, including but not limited to pet profiles, adoption listings, images, and user data, is owned by PetLink unless otherwise specified. You grant PetLink a license to use, modify, and display content as needed for platform operation.</p>
+
+    <h3>Prohibited Activities</h3>
+    <p>Users are prohibited from posting any illegal content, including hate speech, violent threats, and explicit material. Unauthorized use of another user's data, such as impersonation, is also prohibited.</p>
+
+    <h3>Termination</h3>
+    <p>PetLink reserves the right to suspend or terminate your account if you violate these Terms, engage in unlawful activities, or disrupt the platform's operations. You may also terminate your account at any time by contacting us.</p>
+
+
+    <h3>Limitation of Liability</h3>
+    <p>Learn about the extent of PetLink's responsibilities and limits regarding platform usage. Click "Show More" for details.</p>
+    <button id="toggleLiability">Show More</button>
+    <div id="liabilitySection" style="display:none;">
+        <p>PetLink is not liable for any direct, indirect, incidental, special, or consequential damages arising out of your use of the platform. We do not guarantee the accuracy or reliability of pet listings or the actions of other users.</p>
+    </div>
+
+    <h3 style="padding-top: 20px;">Indemnification</h3>
+    <p>You agree to indemnify and hold harmless PetLink, its affiliates, and its employees from any claims, losses, or damages arising out of your actions, content, or violation of these Terms.</p>
+
+    <h3>Intellectual Property</h3>
+    <p>All intellectual property, including trademarks, logos, and website design, is owned by PetLink. You may not use our intellectual property without explicit permission.</p>
+
+    <h3>Disclaimers</h3>
+    <p>PetLink makes no warranties regarding the accuracy, completeness, or reliability of any content on the platform. The platform is provided "as is" and may be subject to errors, bugs, or interruptions.</p>
+
+    <h3>Governing Law</h3>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which PetLink operates. Any disputes will be resolved in the appropriate court of law in that jurisdiction.</p>
+
+    <h3>Changes to Terms</h3>
+    <p>Stay informed about updates to our terms and policies. Click "Show More" to learn how we notify users of changes.</p>
+    <button id="toggleChanges">Show More</button>
+    <div id="changesSection" style="display:none;">
+        <p>PetLink reserves the right to modify or update these Terms at any time. You will be notified of any significant changes through the platform or via email. Your continued use of the platform after any changes signifies your acceptance of the new Terms.</p>
+    </div>
+
+    <h3 style="padding-top: 20px;">Third-Party Links</h3>
+    <p>The platform may contain links to third-party websites. PetLink is not responsible for the content or practices of these external sites. Use third-party links at your own discretion.</p>
+
+    <h3>Severability</h3>
+    <p>If any part of these Terms is found to be invalid or unenforceable, the remainder of the Terms will continue in full force and effect. The invalid section will be modified to reflect the intent of the original provision.</p>
+
+    <h3>Contact Us</h3>
+    <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:amela.vatres@ibu.edu.ba">amela.vatres@ibu.edu.ba</a>.</p>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations of Web Development</p>
+        <p>Created by: Merjem Alić</p>
+        <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
+    </footer>
+
+    <script src="terms-and-conditions.js"></script>
+    
+</body>
+</html>
