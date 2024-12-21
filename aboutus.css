@@ -185,3 +185,8 @@ footer p {
         background-size: cover;
     }
 }
+
+body.dark-mode .list-group-item{
+    background-color: #333;
+    color: white;
+}
