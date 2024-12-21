@@ -4,16 +4,19 @@ function toggleDarkMode() {
     const section = document.querySelector('section');
     const toggleButton = document.getElementById('darkModeButton');
 
-    body.classList.toggle('dark-mode');
-    header.classList.toggle('dark-mode');
-    section.classList.toggle('dark-mode');
+    // Only proceed if toggleButton exists
+    if (toggleButton) {
+        body.classList.toggle('dark-mode');
+        header && header.classList.toggle('dark-mode');  // Check if header exists
+        section && section.classList.toggle('dark-mode'); // Check if section exists
 
-    if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '🌞';  // light mode
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
-        toggleButton.textContent = '🌙';  // light mode
-        localStorage.setItem('darkMode', 'disabled');
+        if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = '🌞';  // light mode
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            toggleButton.textContent = '🌙';  // dark mode
+            localStorage.setItem('darkMode', 'disabled');
+        }
     }
 }
 
@@ -27,11 +30,11 @@ function loadDarkModePreference() {
 
     if (darkMode === 'enabled') {
         body.classList.add('dark-mode');
-        header.classList.add('dark-mode');
-        section.classList.add('dark-mode');
-        toggleButton.textContent = '🌞';   
+        header && header.classList.add('dark-mode');  // Check if header exists
+        section && section.classList.add('dark-mode'); // Check if section exists
+        if (toggleButton) toggleButton.textContent = '🌞';  // light mode
     } else {
-        toggleButton.textContent = '🌙'; 
+        if (toggleButton) toggleButton.textContent = '🌙';  // dark mode
     }
 }
 
