@@ -87,6 +87,7 @@
             color: white;
             text-align: center;
             padding: 10px;
+            color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -116,6 +117,19 @@
         .modal-content img {
             width: 100%;
             height: auto;
+            max-height: 500px; 
+            object-fit: contain; 
+        }
+
+        .modal-content .modal-description {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .modal-description{
+            color: #0f1f3d;
         }
 
         .modal-close {
@@ -132,8 +146,29 @@
             cursor: pointer;
         }
 
+        .modal-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-arrow.prev {
+            left: 10px;
+        }
+
+        .modal-arrow.next {
+            right: 10px;
+        }
+
         footer {
-            background-color: #0f1f3d; 
+            background-color: #0f1f3d;
             color: #f1f1f1;
             text-align: center;
             padding: 60px;
@@ -166,17 +201,13 @@ body.dark-mode .navbar {
     background-color: #333;
 }
 
-body.dark-mode .container h3 {
-    color: #0f1f3d; 
-}
-
 body.dark-mode .navbar a {
     color: #fff;
 }
 
 body.dark-mode .navbar a:hover {
     color: #b0b0b0;
-} 
+}
 
 .theme-toggle {
             background: none;
@@ -201,11 +232,20 @@ body.dark-mode .navbar a:hover {
             outline: none;
         }
 
-        body.dark-mode{
-            background-image: url('images/darkimage.png');
-            background-position: center;
-            background-size: cover;
+        body.dark-mode .modal-description{
+            background-color: #333;
+            color: white;
         }
+
+        body.dark-mode .modal-content{
+            background-color: #333;
+        }
+        
+        body.dark-mode .some-text{
+            background-color: #333;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -231,42 +271,44 @@ body.dark-mode .navbar a:hover {
         </div>
     </nav>
 
-    <!-- Gallery Section -->
     <div class="gallery-container">
         <div class="some-text">
             <h1 class="text-center">Previously Adopted Pets</h1>
-            <p class="text-center">Celebrate the success stories of our adopted pets!</p>
+            <p class="text-center">Here are some of our adopted pets, click on any picture below to view the full-size image in a modal!</p>
         </div>
+
+        <!-- Interactive Gallery (main images) -->
         <div class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item" data-index="0">
                 <img src="images/milo.jpg" alt="Milo - Adopted by Sarah">
                 <div class="gallery-caption">Milo - Adopted by Sarah</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-index="1">
                 <img src="images/teddy2.webp" alt="Teddy - Now in his forever home">
                 <div class="gallery-caption">Teddi - Now in his forever home</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-index="2">
                 <img src="images/charlie.jpg" alt="Charlie - Living happily with the Smith family">
                 <div class="gallery-caption">Charlie - Living happily with the Smith family</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/peanutjerry.jpg" alt="Peanut and Jerry - Enjoying life with their new friend">
-                <div class="gallery-caption">Peanut and Jerry - Enjoying life with their new friend</div>
+            <div class="gallery-item" data-index="3">
+                <img src="images/peanutjerry.jpg" alt="Peanut and Jerry - Adopted and loved">
+                <div class="gallery-caption">Peanut and Jerry - Adopted and loved</div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <button class="modal-arrow prev">&#10094;</button>
+                <img src="" alt="Modal Image">
+                <p class="modal-description"></p>
+                <button class="modal-arrow next">&#10095;</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <img id="modalImage" src="" alt="">
-            <p id="modalCaption"></p>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 PetLink. All rights reserved.</p>
         <p>Course: Foundations Web Development</p>
@@ -274,33 +316,49 @@ body.dark-mode .navbar a:hover {
         <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
     </footer>
 
-    <script src="darkmode.js" defer></script>
-
     <script>
+        const modal = document.querySelector('.modal');
+        const modalClose = document.querySelector('.modal-close');
+        const modalImage = modal.querySelector('img');
+        const modalDescription = modal.querySelector('.modal-description');
+        const nextBtn = modal.querySelector('.next');
+        const prevBtn = modal.querySelector('.prev');
         const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-        const closeModal = document.querySelector('.modal-close');
+        let currentIndex = 0;
 
-        galleryItems.forEach(item => {
+        galleryItems.forEach((item, index) => {
             item.addEventListener('click', () => {
+                currentIndex = index;
                 const img = item.querySelector('img');
+                const caption = item.querySelector('.gallery-caption');
                 modalImage.src = img.src;
-                modalCaption.textContent = item.querySelector('.gallery-caption').textContent;
+                modalDescription.textContent = caption.textContent;
                 modal.style.display = 'flex';
             });
         });
 
-        closeModal.addEventListener('click', () => {
+
+        modalClose.addEventListener('click', () => {
             modal.style.display = 'none';
         });
 
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateModal();
         });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateModal();
+        });
+
+        function updateModal() {
+            const item = galleryItems[currentIndex];
+            const img = item.querySelector('img');
+            const caption = item.querySelector('.gallery-caption');
+            modalImage.src = img.src;
+            modalDescription.textContent = caption.textContent;
+        }
     </script>
 
     <script src="darkmode.js" defer></script>
