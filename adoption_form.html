@@ -100,7 +100,103 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+}    
+
+body.dark-mode{
+    background-image: url('images/darkimage.png');
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
 }
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #b0b0b0;
+} 
+
+.theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
+        }
+
+        body.dark-mode{
+            background-image: url('images/darkimage.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        body.dark-mode h2{
+            color: white;
+        }
+
+        body.dark-mode .form-container .card{
+            color: white;
+            background: #333;
+        }
+
+        body.dark-mode label{
+            color: white !important;
+        }
+
+        body.dark-mode textarea{
+            color: white;
+        }
+
+        body.dark-mode input:focus,
+        body.dark-mode textarea:focus {
+        background-color: #444; 
+        outline: none;
+        border-color: #0f1f3d; 
+        color: white;
+}   
+
+body.dark-mode .weather-info {
+    background-color: #34495e; /* Darker background in dark mode */
+}
+
+        body.dark-mode input{
+            background-color: #333;
+            color: white;
+        }
+
+        body.dark-mode textarea{
+            background-color: #333;
+        }
+
+        .weather-info {
+    background-color: #2c3e50; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
     </style>
     <script>
         function handleDrop(event) {
@@ -123,6 +219,8 @@
             navigator.geolocation.getCurrentPosition(position => {
                 document.getElementById('geolocation').value = 
                     `Lat: ${position.coords.latitude}, Lng: ${position.coords.longitude}`;
+
+                getWeather(position.coords.latitude, position.coords.longitude);
             });
         }
         function showModal() {
@@ -133,6 +231,58 @@
             e.preventDefault();
             showModal();
         }
+
+        function confirmSubmission() {
+        const form = document.forms[0];
+        const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset(); // Reset the form
+            
+            const modal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+            modal.hide(); // Close the modal
+        } else {
+            alert("Error submitting the form.");
+        }
+    })
+    .catch(error => {
+        console.error("Error during submission:", error);
+        alert("An error occurred. Please try again.");
+    });
+}
+        
+
+
+        function getWeather(latitude, longitude) {
+        const apiKey = '0792feece7d96dcb18a535dc4091e337'; // Replace with your OpenWeatherMap API key
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+        // fetch the weather data
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.cod === 200) {
+                    const weather = data.weather[0].description;
+                    const temperature = data.main.temp;
+                    const cityName = data.name;
+
+                    const weatherInfo = `Weather in ${cityName}: ${weather}, ${temperature}°C`;
+                    document.getElementById('weatherInfo').textContent = weatherInfo;
+                } else {
+                    document.getElementById('weatherInfo').textContent = "Weather information not available.";
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching weather data:", error);
+                document.getElementById('weatherInfo').textContent = "Failed to load weather data.";
+            });
+    }
     </script>
 </head>
 <body>
@@ -151,6 +301,8 @@
                     <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
                 </ul>
             </div>
         </div>
@@ -188,6 +340,10 @@
                     <input type="text" id="geolocation" name="geolocation" class="form-control" readonly>
                     <button type="button" class="btn btn-primary mt-2" onclick="getLocation()">Get Location</button>
                 </div>
+                <div class="mb-3">
+                    <label for="weatherInfo" class="form-label" style="color: #0f1f3d;">Weather Information:</label>
+                    <div id="weatherInfo" class="form-control" style="background-color: #f8f9fa;"></div>
+                </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
@@ -208,7 +364,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="document.forms[0].submit()">Yes, Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmSubmission()">Yes, Submit</button>
                 </div>
             </div>
         </div>
@@ -218,7 +374,10 @@
         <p style="color: white;">&copy; 2024 PetLink. All rights reserved.</p>
         <p style="color: white;">Course: Foundations of Web Development</p>
         <p style="color: white;">Created by: Merjem Alić</p>
+        <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
     </footer>
+
+    <script src="darkmode.js" defer></script>
 
 </body>
 </html>

@@ -160,6 +160,85 @@
     padding: 0 10px; /* Controls horizontal spacing */
     margin-bottom: 15px; /* Controls vertical spacing */
 }
+
+body.dark-mode {
+    background-image: url('images/darkimage.png');
+    background-position: center;
+    background-size: cover;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+body.dark-mode .pet-info {
+    background-color: #333 !important;
+    color: white;  
+}
+
+body.dark-mode .pet-card, 
+body.dark-mode .pet-info {
+    background-color: #333; 
+    color: white;  
+}
+
+body.dark-mode .pet-card h5, 
+body.dark-mode .pet-card p, 
+body.dark-mode .pet-info h3, 
+body.dark-mode .pet-info p {
+    color: white;  
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #b0b0b0;
+} 
+
+body.dark-mode .pet-info h3, 
+body.dark-mode .pet-info p {
+    color: white; 
+}
+
+.theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
+        }
+
+        body.dark-mode{
+            background-image: url('images/darkimage.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .pet-info {
+        background-color: white; 
+        color: #0f1f3d; 
+        }
+
+    .pet-info h3, .pet-info p {
+        color: #0f1f3d; 
+    }
     </style>
 </head>
 <body>
@@ -179,6 +258,8 @@
                     <li class="nav-item"><a class="nav-link active" href="mainpage.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
                 </ul>
             </div>
         </div>
@@ -186,13 +267,13 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1 class="text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">Welcome to PetLink!</h1>
-        <p class="text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">Your one-stop platform for pet adoption!</p>
+        <h1 class="text-center">Welcome to PetLink!</h1>
+        <p class="text-center">Your one-stop platform for pet adoption!</p>
 
         <div class="pet-info bg-light p-4 my-4 rounded shadow-lg">
-            <h3 class="text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d;">About Our Available Pets</h3>
-            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d ; font-size: 18px;">Our platform offers a wide variety of pets available for adoption. Each pet has been carefully cared for, vaccinated, and is looking for a forever home! We have adorable puppies, playful kittens, and even some exotic pets like birds and rabbits!</p>
-            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d; font-size: 18px;">All of our pets are healthy, friendly, and eager to meet their new family members. Our adoption process is simple, and we make sure to match each pet with the right family. Browse through our available pets and find your new best friend today!</p>
+            <h3 class="text-center">About Our Available Pets</h3>
+            <p>Our platform offers a wide variety of pets available for adoption. Each pet has been carefully cared for, vaccinated, and is looking for a forever home! We have adorable puppies, playful kittens, and even some exotic pets like birds and rabbits!</p>
+            <p>All of our pets are healthy, friendly, and eager to meet their new family members. Our adoption process is simple, and we make sure to match each pet with the right family. Browse through our available pets and find your new best friend today!</p>
         </div>
     </div>
 
@@ -271,7 +352,10 @@
         <p>&copy; 2024 PetLink. All rights reserved.</p>
         <p>Course: Foundations Web Development</p>
         <p>Created by: Merjem Alić</p>
+        <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
     </footer>
+
+    <script src="darkmode.js" defer></script>
 
 </body>
 </html>

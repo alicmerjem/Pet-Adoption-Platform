@@ -39,9 +39,27 @@
             color: #0056b3;
         }
 
-        .navbar-nav .nav-link.active {
-        color: #0056b3;
-        text-decoration: underline;
+        .theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
         }
 
      </style>
@@ -63,6 +81,8 @@
                 <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                <li class="nav-time"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
             </ul>
         </div>
     </div>
@@ -78,8 +98,10 @@
   
     <section class="success-stories left">
         <div class="text-content">
-            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; color: #0f1f3d; padding-bottom: 8px;">Success Stories</h2>
-            <p style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d;">We love hearing about the wonderful stories of our adopted pets! Share your success story on social media and tag us with <strong>#PetLinkSuccess</strong>. Your story could inspire others to adopt and give a pet a second chance! Whether it's the joyous moment of bringing a pet home, or their heartwarming transformation with your love and care, every story matters to us.</p>
+            <h2>Success Stories</h2>
+            <p>We love hearing about the wonderful stories of our adopted pets! Share your success story on social media and tag us with <strong>#PetLinkSuccess</strong>. Your story could inspire others to adopt and give a pet a second chance! Whether it's the joyous moment of bringing a pet home, or their heartwarming transformation with your love and care, every story matters to us.</p>
+            <p>Here are some of the <a href="reviews.html">reviews</a> from our happy customers.</p>
+            <p>You can also check out the <a href="adopted.html">adopted section</a> to see all the happy pets that were adopted so far.</p>
         </div>
         <div class="image-content">
         </div>
@@ -89,8 +111,8 @@
 
     <section class="meet-our-pets right">
         <div class="text-content">
-            <h2 style="font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d; padding-bottom: 8px;">Meet Our Pets</h2>
-            <p style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #0f1f3d;">Find Your New Best Friend! Check out some of our adorable pets looking for homes! Each pet has its own unique personality and story, waiting for someone like you to make it complete. From playful puppies to calm seniors, there’s a perfect match for everyone!
+            <h2>Meet Our Pets</h2>
+            <p>Find Your New Best Friend! Check out some of our adorable pets looking for homes! Each pet has its own unique personality and story, waiting for someone like you to make it complete. From playful puppies to calm seniors, there’s a perfect match for everyone!
            </p>
         </div>
         <div class="image-content"></div>
@@ -99,9 +121,9 @@
 
     <section class="volunteer-opportunities left">
         <div class="text-content">
-            <h2 style="color: #0f1f3d; font-size: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-bottom: 8px;">Volunteer Opportunities</h2>
-            <p style="color: #0f1f3d; font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Are you passionate about helping animals? We welcome volunteers at our pet shelters! Your time and love can make a significant difference in the lives of these pets.</p>
-            <a href="contactus.html" style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Click here for more information.</a>
+            <h2>Volunteer Opportunities</h2>
+            <p >Are you passionate about helping animals? We welcome volunteers at our pet shelters! Your time and love can make a significant difference in the lives of these pets.</p>
+            <a href="contactus.html">Click here for more information.</a>
         </div>
         <div class="image-content"></div>
     </section>
@@ -110,8 +132,8 @@
 
     <section class="free-vet-visits right">
         <div class="text-content">
-            <h2 style="font-size: 50px; color: #0f1f3d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-bottom: 8px;">Free Vet Visits</h2>
-            <p style="font-size: 20px; color: #0f1f3d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">When you adopt a pet from PetLink, you’ll receive free visits to our partnered vet clinic! We want to ensure that your new furry friend stays healthy and happy. These visits cover initial health check-ups, vaccinations, and dietary advice to make the transition to their new home as smooth as possible.</p>
+            <h2>Free Vet Visits</h2>
+            <p>When you adopt a pet from PetLink, you’ll receive free visits to our partnered vet clinic! We want to ensure that your new furry friend stays healthy and happy. These visits cover initial health check-ups, vaccinations, and dietary advice to make the transition to their new home as smooth as possible.</p>
         </div>
         <div class="image-content"></div>
     </section>
@@ -121,7 +143,10 @@
         <p>&copy; 2024 PetLink. All rights reserved.</p>
         <p>Course: Foundations of Web Development</p>
         <p>Created by: Merjem Alić</p>
+        <p style="padding-top: 20px;"><a href="terms-and-conditions.html">Terms and Conditions</a></p>
     </footer>
+
+    <script src="darkmode.js" defer></script>
 
 </body>
 </html>
