@@ -9,7 +9,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,18 +98,18 @@ footer p {
 
 /* Checking for browser support for the avif extension */
 
-@supports (background-image: url('images/mainimg.avif')) {
+@supports (background-image: url('/images/mainimg.avif')) {
     body{
-        background-image: url('images/mainimg.avif');
+        background-image: url('/images/mainimg.avif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
 
-@supports not (background-image: url('images/mainimg.avif')) {
+@supports not (background-image: url('/images/mainimg.avif')) {
     body{
-        background-image: url('images/image.png');
+        background-image: url('/images/image.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -118,7 +118,7 @@ footer p {
 }
 
 body.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -174,7 +174,7 @@ body.dark-mode input.form-control{
         }
 
         body.dark-mode{
-            background-image: url('images/darkimage.png');
+            background-image: url('/images/darkimage.png');
             background-position: center;
             background-size: cover;
         }

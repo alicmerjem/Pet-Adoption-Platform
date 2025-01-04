@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,18 +75,18 @@ footer p {
     margin: 5px 0;
 }
 
-@supports (background-image: url('images/mainimg.avif')) {
+@supports (background-image: url('/images/mainimg.avif')) {
 body{
-background-image: url('images/mainimg.avif');
+background-image: url('/images/mainimg.avif');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
 }
 
-@supports not (background-image: url('images/mainimg.avif')) {
+@supports not (background-image: url('/images/mainimg.avif')) {
 body{
-background-image: url('images/image.png');
+background-image: url('/images/image.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -94,7 +94,7 @@ background-size: cover;
 }    
 
 body.dark-mode{
-background-image: url('images/darkimage.png');
+background-image: url('/images/darkimage.png');
 color: #ffffff;
 background-size: cover;
 background-position: center;
@@ -136,7 +136,7 @@ color: #b0b0b0;
 }
 
 body.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     background-position: center;
     background-size: cover;
 }

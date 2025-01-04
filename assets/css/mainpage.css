@@ -1,6 +1,6 @@
        /* Body background and font color */
        body {
-        background-image: url('images/mainimg.avif');
+        background-image: url('/images/mainimg.avif');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -122,9 +122,9 @@
 
 /* Checking for browser support for the avif extension */
 
-@supports (background-image: url('images/mainimg.avif')) {
+@supports (background-image: url('/images/mainimg.avif')) {
 body{
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,9 +132,9 @@ body{
 
 }
 
-@supports not (background-image: url('images/mainimg.avif')) {
+@supports not (background-image: url('/images/mainimg.avif')) {
 body{
-    background-image: url('images/image.png');
+    background-image: url('/images/image.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -152,7 +152,7 @@ margin-bottom: 15px; /* Controls vertical spacing */
 }
 
 body.dark-mode {
-background-image: url('images/darkimage.png');
+background-image: url('/images/darkimage.png');
 background-position: center;
 background-size: cover;
 }
@@ -216,7 +216,7 @@ color: white;
     }
 
     body.dark-mode{
-        background-image: url('images/darkimage.png');
+        background-image: url('/images/darkimage.png');
         background-position: center;
         background-size: cover;
     }

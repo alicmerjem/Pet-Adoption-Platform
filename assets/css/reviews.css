@@ -95,7 +95,7 @@ footer p {
 }
 
 body.dark-mode{
-background-image: url('images/darkimage.png');
+background-image: url('/images/darkimage.png');
 color: #ffffff;
 background-size: cover;
 background-position: center;
@@ -137,7 +137,7 @@ color: #b0b0b0;
 }
 
 body.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     background-position: center;
     background-size: cover;
 }

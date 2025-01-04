@@ -4,7 +4,7 @@ footer p{
 
         /* Body styling */
         body {
-            background-image: url('images/mainimg.avif');
+            background-image: url('/images/mainimg.avif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -187,7 +187,7 @@ footer p{
         }
 
         body.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     color: #ffffff;
     background-size: cover;
     background-position: center;

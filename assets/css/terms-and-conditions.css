@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +75,7 @@ button:hover {
 }
 
 body.dark-mode {
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -122,7 +122,7 @@ body.dark-mode .navbar a:hover {
 }
 
 body.dark-mode {
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     background-position: center;
     background-size: cover;
 }

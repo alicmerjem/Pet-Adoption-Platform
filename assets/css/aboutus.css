@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0f1f3d;
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +88,7 @@ nav.navbar a:hover {
 
 /* Dark Mode Styling */
 body.dark-mode {
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     background-position: center;
     background-size: cover;
     color: white;
@@ -172,18 +172,18 @@ footer p {
     font-size: 20px;
 }
 
-@supports (background-image: url('images/mainimg.avif')) {
+@supports (background-image: url('/images/mainimg.avif')) {
     body {
-        background-image: url('images/mainimg.avif');
+        background-image: url('/images/mainimg.avif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
 
-@supports not (background-image: url('images/mainimg.avif')) {
+@supports not (background-image: url('/images/mainimg.avif')) {
     body {
-        background-image: url('images/image.png');
+        background-image: url('/images/image.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -192,5 +192,9 @@ footer p {
 
 body.dark-mode .list-group-item{
     background-color: #333;
+    color: white;
+}
+
+body footer p{
     color: white;
 }

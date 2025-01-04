@@ -6,7 +6,7 @@
 
 body {
     background-color: #0059b3;
-    background-image: url('images/mainimg.avif');
+    background-image: url('/images/mainimg.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@ nav {
 
 
 body.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -66,7 +66,7 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    background-image: url(images/mainimg.avif);
+    background-image: url(/images/mainimg.avif);
     background-size: cover;        /* Make the image cover the entire header */
     background-position: center;   /* Center the image */
     background-repeat: no-repeat;  /* Prevent the image from repeating */
@@ -80,7 +80,7 @@ header {
 }
 
 header.dark-mode{
-    background-image: url('images/darkimage.png');
+    background-image: url('/images/darkimage.png');
     color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -157,7 +157,7 @@ section {
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url(images/image2.png);
+    background-image: url(/images/image2.png);
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
@@ -247,19 +247,19 @@ body.dark-mode h2{
 }
 
 .success-stories .image-content {
-    background-image: url('images/successstories.jpg'); 
+    background-image: url('/images/successstories.jpg'); 
 }
 
 .meet-our-pets .image-content {
-    background-image: url('images/meetourpets.jpg'); 
+    background-image: url('/images/meetourpets.jpg'); 
 }
 
 .volunteer-opportunities .image-content {
-    background-image: url('images/volunteer.jpg');
+    background-image: url('/images/volunteer.jpg');
 }
 
 .free-vet-visits .image-content {
-    background-image: url('images/vetclinic.jpg');
+    background-image: url('/images/vetclinic.jpg');
 }
 
 footer {
@@ -349,32 +349,32 @@ footer p {
 @media (min-width: 901px) {
 }
 
-@supports (background-image: url('images/mainimg.avif')) {
+@supports (background-image: url('/images/mainimg.avif')) {
     body{
-        background-image: url('images/mainimg.avif');
+        background-image: url('/images/mainimg.avif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     header{
-        background-image: url('images/mainimg.avif');
+        background-image: url('/images/mainimg.avif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
 
-@supports not (background-image: url('images/mainimg.avif')) {
+@supports not (background-image: url('/images/mainimg.avif')) {
     body{
-        background-image: url('images/image.png');
+        background-image: url('/images/image.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     header{
-        background-image: url('images/image.png');
+        background-image: url('/images/image.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
