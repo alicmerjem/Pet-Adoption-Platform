@@ -1,0 +1,169 @@
+body{
+    background-image: url('/images/mainimg.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav.navbar {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 1em
+}
+
+nav.navbar a {
+    color: #0f1f3d;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav.navbar a:hover {
+    color: #0056b3;
+}
+
+nav .navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0f1f3d;
+}
+
+h1, h2 {
+    color: #0f1f3d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #0f1f3d;
+}
+.container {
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.review-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.review-card h5 {
+    color: #0056b3;
+}
+.review-card p {
+    color: #333;
+}
+.rating {
+    font-size: 1.2rem;
+    color: #FFD700; /* Gold color for stars */
+}
+footer {
+    background-color: #0f1f3d;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+body.dark-mode{
+background-image: url('images/darkimage.png');
+color: #ffffff;
+background-size: cover;
+background-position: center;
+}
+
+body.dark-mode .navbar {
+background-color: #333;
+}
+
+body.dark-mode .navbar a {
+color: #fff;
+}
+
+body.dark-mode .navbar a:hover {
+color: #b0b0b0;
+} 
+
+.theme-toggle {
+    background: none;
+    border: 1px solid #0f1f3d; 
+    color: #000;  
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    position: absolute; 
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1; 
+}
+
+.theme-toggle:hover {
+    background-color: #ddd; 
+}
+
+.theme-toggle:focus {
+    outline: none;
+}
+
+body.dark-mode{
+    background-image: url('images/darkimage.png');
+    background-position: center;
+    background-size: cover;
+}
+
+body.dark-mode .container{
+    color: white;
+    background-color: #2c2c2c;
+}
+
+body.dark-mode .container h1{
+    color: white;
+}
+
+body.dark-mode .container p{
+    color: white;
+}
+
+body.dark-mode .review-card{
+    color: white;
+    background-color: #333;
+}
+
+body.dark-mode .review-card h5{
+    color: white;
+}
+
+body.dark-mode .review-card p{
+    color: white;
+}

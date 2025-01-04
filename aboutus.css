@@ -9,6 +9,10 @@ body {
     background-size: cover;
 }
 
+footer p{
+    padding-top: 20px;
+}
+
 h1, h2 {
     color: #0f1f3d;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

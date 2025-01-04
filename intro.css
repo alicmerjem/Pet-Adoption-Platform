@@ -380,3 +380,44 @@ footer p {
         background-size: cover;
     }
 }
+
+        /* Navbar styling */
+        nav.navbar {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav.navbar a {
+            color: #0f1f3d;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav.navbar a:hover {
+            color: #0056b3;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid #0f1f3d; 
+            color: #000;  
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+            position: absolute; 
+            right: 20px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            z-index: 1; 
+        }
+
+        .theme-toggle:hover {
+            background-color: #ddd; 
+        }
+
+        .theme-toggle:focus {
+            outline: none;
+        }
