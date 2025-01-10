@@ -241,3 +241,7 @@ body.dark-mode .textfix h1{
 body .textfix h1, p{
     color: white;
 }
+
+footer p{
+    padding-top: 20px;
+}

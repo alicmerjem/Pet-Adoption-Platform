@@ -256,4 +256,8 @@ body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
             background-position: center;
             background-size: cover;
         }
+    
+p {
+    padding-top: 20px;
+}
 
