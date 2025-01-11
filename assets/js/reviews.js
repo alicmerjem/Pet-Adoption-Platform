@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: 'reviews.json', // Path to the JSON file
+        url: '../assets/json/reviews.json', // Path to the JSON file
         type: 'GET',
         dataType: 'json',
         success: function(data) {

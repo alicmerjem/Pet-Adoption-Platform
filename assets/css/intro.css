@@ -66,10 +66,6 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    background-image: url(/images/mainimg.avif);
-    background-size: cover;        /* Make the image cover the entire header */
-    background-position: center;   /* Center the image */
-    background-repeat: no-repeat;  /* Prevent the image from repeating */
     height: 100vh;                /* Full height of the viewport */
     display: flex;                /* Use flexbox for centering content */
     flex-direction: column;       /* Align items in a column */
@@ -157,9 +153,6 @@ section {
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url(/images/image2.png);
-    background-size: cover;
-    background-position: center;
     padding: 40px 20px;
     min-height: 300px;
     justify-content: space-between;
