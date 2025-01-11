@@ -22,10 +22,11 @@ nav {
 
 
 body.dark-mode{
-    background-image: url('/images/darkimage.png');
+    background-image: url('/images/darkimage.png') !important;
     color: #ffffff;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 body.dark-mode .navbar {
@@ -75,12 +76,6 @@ header {
     color: white; 
 }
 
-header.dark-mode{
-    background-image: url('/images/darkimage.png');
-    color: #ffffff;
-    background-size: cover;
-    background-position: center;
-}
 
 header h1{
     font-size: 3rem;
@@ -158,6 +153,9 @@ section {
     justify-content: space-between;
 }
 
+body.dark-mode header{
+    background-image: none;
+}
 
 
 body.dark-mode section {
@@ -290,6 +288,7 @@ footer p {
     section {
         flex-direction: column; 
         padding: 20px;
+        background-image: none !important;
     }
 
     .text-content, .image-content {
@@ -350,12 +349,6 @@ footer p {
         background-size: cover;
     }
 
-    header{
-        background-image: url('/images/mainimg.avif');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 }
 
 @supports not (background-image: url('/images/mainimg.avif')) {
@@ -366,12 +359,6 @@ footer p {
         background-size: cover;
     }
 
-    header{
-        background-image: url('/images/image.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 }
 
         /* Navbar styling */
