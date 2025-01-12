@@ -9,7 +9,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url("/images/mainimg.avif");
+  background-image: url("../../images/mainimg.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
+body, html{
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
 body {
     background-color: #0059b3;
-    background-image: url('/images/mainimg.avif');
+    background-image: url(../../images/mainimg.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +33,7 @@ nav {
 
 
 body.dark-mode{
-    background-image: url('/images/darkimage.png') !important;
+    background-image: url('../../images/darkimage.png') !important;
     color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -74,6 +85,7 @@ header {
     align-items: center;          /* Center items horizontally */
     text-align: center;           /* Center text */
     color: white; 
+    flex: 0 1 auto;
 }
 
 
@@ -111,6 +123,11 @@ button {
     background-color: #0056b3;
     color: white;
     transition: background-color 0.3s;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 button:hover {
@@ -151,10 +168,6 @@ section {
     padding: 40px 20px;
     min-height: 300px;
     justify-content: space-between;
-}
-
-body.dark-mode header{
-    background-image: none;
 }
 
 
@@ -238,19 +251,29 @@ body.dark-mode h2{
 }
 
 .success-stories .image-content {
-    background-image: url('/images/successstories.jpg'); 
+    background-image: url('../../images/successstories.jpg'); 
 }
 
 .meet-our-pets .image-content {
-    background-image: url('/images/meetourpets.jpg'); 
+    background-image: url('../../images/meetourpets.jpg'); 
 }
 
 .volunteer-opportunities .image-content {
-    background-image: url('/images/volunteer.jpg');
+    background-image: url('../../images/volunteer.jpg');
 }
 
 .free-vet-visits .image-content {
-    background-image: url('/images/vetclinic.jpg');
+    background-image: url('../../images/vetclinic.jpg');
+}
+
+.custom {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pageContent{
+    padding: 0;
 }
 
 footer {
@@ -260,6 +283,11 @@ footer {
     padding: 60px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    clear: both;
+    margin-top: auto;
 }
 
 footer p {
@@ -320,6 +348,7 @@ footer p {
     section {
         flex-direction: column; 
         padding: 30px;
+        margin-bottom: 20px;
     }
 
     .text-content, .image-content {
@@ -341,9 +370,9 @@ footer p {
 @media (min-width: 901px) {
 }
 
-@supports (background-image: url('/images/mainimg.avif')) {
+@supports (background-image: url('../../images/mainimg.avif')) {
     body{
-        background-image: url('/images/mainimg.avif');
+        background-image: url('../../images/mainimg.avif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -351,9 +380,9 @@ footer p {
 
 }
 
-@supports not (background-image: url('/images/mainimg.avif')) {
+@supports not (background-image: url('../../images/mainimg.avif')) {
     body{
-        background-image: url('/images/image.png');
+        background-image: url('../../images/image.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

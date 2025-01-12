@@ -1,11 +1,11 @@
 [
     {
-        "username" : "johndoe",
+        "email" : "johndoe@example.com",
         "password" : "Someting1234!"
     },
 
     {
-        "username" : "janedoe",
+        "email" : "janedoe@example.com",
         "password" : "Something3214!"
     }
 ]
