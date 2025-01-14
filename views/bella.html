@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/animals.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Meet Bella - Pet Adoption Platform</title>
+</head>
+<body>
+
+    <!-- Navbar Section using Bootstrap -->
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">
+                PetLink
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container with Background -->
+    <div class="container my-4 content-container">
+
+        <!-- Animal Section with Image and Description Side by Side -->
+        <section class="animal-profile row align-items-center">
+            <div class="col-md-4 animal-image">
+                <img src="/images/dog2.avif" alt="Bella the dog" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8 animal-description">
+                <h1 style="color: #0f1f3d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Meet Bella</h1>
+                <p>Bella is a playful, energetic 2-year-old dog with a loving heart. She’s always up for a game of fetch, a run in the park, or just cuddling on the couch. Bella is a loyal companion who loves spending time with her human family and gets along great with other dogs.</p>
+                <p>With her beautiful coat and big brown eyes, Bella is as charming as she is friendly. She’s a natural at making new friends, whether it's people or other pets!</p>
+            </div>
+        </section>
+
+        <!-- Details Section (Table) -->
+        <section class="details-section my-4">
+            <h2>Bella's Profile</h2>
+            <table class="table table-striped">
+                <tr><th>Attribute</th><th>Details</th></tr>
+                <tr><td>Age</td><td>2 years</td></tr>
+                <tr><td>Breed</td><td>Bernedoodle</td></tr>
+                <tr><td>Gender</td><td>Female</td></tr>
+                <tr><td>Size</td><td>Small</td></tr>
+                <tr><td>Vaccinations</td><td>Up-to-date</td></tr>
+            </table>
+        </section>
+
+        <!-- Care Requirements Section -->
+        <section class="care-requirements my-4">
+            <h2>Care Requirements</h2>
+            <ul>
+                <li>Daily exercise and walks</li>
+                <li>Regular grooming to keep her coat shiny and healthy</li>
+                <li>A home with a secure yard for her to run and play safely</li>
+                <li>Plenty of attention and affection from her family</li>
+            </ul>
+        </section>
+
+        <!-- Optional Fun Facts Section -->
+        <section class="fun-facts my-4">
+            <h2>Fun Facts About Fluffy</h2>
+            <ul>
+                <li>Bella loves water and will jump right into any pool or lake she finds!</li>
+                <li>Her favorite toy is a squeaky tennis ball – she can play with it for hours.</li>
+                <li>Bella has a funny habit of chasing her tail, especially when she's excited.</li>
+            </ul>
+        </section>
+
+        <!-- Adoption Information Section -->
+        <section class="adoption-info-section my-4">
+            <h2>Adoption Information</h2>
+            <p><strong>Adoption Fee:</strong> $150 (includes vaccination and microchip)</p>
+            <p>To adopt Bella, please fill out our <a href="adoption_form.html">Adoption Form</a> and review our adoption requirements.</p>
+        </section>
+
+    </div> 
+
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations of Web Development</p>
+        <p>Created by: Merjem Alić</p>
+        <p><a href="terms-and-conditions.html">Terms and Conditions</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/darkmode.js" defer></script>
+</body>
+</html>

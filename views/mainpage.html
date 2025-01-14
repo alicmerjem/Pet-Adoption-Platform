@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="../assets/css/mainpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">PetLink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="welcome-message">
+            <h2 id="welcomeText" style="color: white; padding-top: 80px; padding-left: 50px;">Welcome to PetLink!</h2>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="textfix">
+            <h1 class="text-center">Welcome to PetLink!</h1>
+            <p class="text-center">Your one-stop platform for pet adoption!</p>
+        </div>
+
+        <div class="pet-info bg-light p-4 my-4 rounded shadow-lg">
+            <h3 class="text-center">About Our Available Pets</h3>
+            <p>Our platform offers a wide variety of pets available for adoption. Each pet has been carefully cared for, vaccinated, and is looking for a forever home! We have adorable puppies, playful kittens, and even some exotic pets like birds and rabbits!</p>
+            <p>All of our pets are healthy, friendly, and eager to meet their new family members. Our adoption process is simple, and we make sure to match each pet with the right family. Browse through our available pets and find your new best friend today!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="fluffy.html">
+                    <img src="/images/cat1.jpg" alt="Fluffy the cat">
+                    <div>
+                        <h5>Fluffy</h5>
+                        <p>A gentle, calm and affectionate cat. She loves quiet afternoons spent napping in sunny spots and cuddling with her humans.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="bella.html">
+                    <img src="/images/dog2.avif" alt="Bella the dog">
+                    <div>
+                        <h5>Bella</h5>
+                        <p>A playful and lenergetic dog, full of loyalty. She's always up for a game of fetch or a walk in the park. </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="max.html">
+                    <img src="/images/parrot1.jpg" alt="Max the parrot">
+                    <div>
+                        <h5>Max</h5>
+                        <p>A lively parrot with beautiful, colorful feathers and a knack for mimicking sounds. He loves socializing and showing off his tricks.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="luna.html">
+                    <img src="/images/rabbit1.jpg" alt="Luna the rabbit">
+                    <div>
+                        <h5>Luna</h5>
+                        <p>A gentle rabbit with a soft coat, who loves munching on fresh greens. She enjoys exploring her sorroundings and relaxing with humans.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="oliver.html">
+                    <img src="/images/hamster21.jpg" alt="Oliver the hamster">
+                    <div>
+                        <h5>Oliver</h5>
+                        <p>A curious little hamster with a lot of energy and love for burrowing. He is the happiest when exploring tiny spaces and nibbling on treats.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="pet-card">
+                <a href="daisy.html">
+                    <img src="/images/doggo2.jpg" alt="Daisy the dog">
+                    <div>
+                        <h5>Daisy</h5>
+                        <p>A friendly and affectionate dog with a gentle temperament. She loves spending time wth people and going on walks.</p>
+                    </div>>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations Web Development</p>
+        <p>Created by: Merjem Alić</p>
+        <p><a href="terms-and-conditions.html">Terms and Conditions</a></p>
+    </footer>
+
+    <script src="../assets/js/darkmode.js" defer></script>
+    <script src="../assets/js/mainpage.js"></script>
+
+</body>
+</html>

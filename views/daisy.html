@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/animals.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Meet Daisy - Pet Adoption Platform</title>
+
+</head>
+<body>
+
+    <!-- Navbar Section using Bootstrap -->
+    <nav class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainpage.html">
+                PetLink
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../intropage.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mainpage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li><button id="darkModeButton" class="theme-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container with Background -->
+    <div class="container my-4 content-container">
+
+        <!-- Animal Section with Image and Description Side by Side -->
+        <section class="animal-profile row align-items-center">
+            <div class="col-md-4 animal-image">
+                <img src="/images/doggo2.jpg" alt="Daisy the dog" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8 animal-description">
+                <h1>Meet Daisy</h1>
+                <p>Daisy is a 2-year-old Portuguese Podengo with a charming and energetic personality. She loves to run and play, especially outdoors, and is always eager for her next adventure. Known for her boundless energy and keen instincts, Daisy is a perfect companion for active families or individuals who love to be outdoors!</p>
+                <p>With her short coat and elegant stance, Daisy is not just a beautiful dog but also an intelligent one. She’s quick to learn new tricks and enjoys staying mentally engaged with puzzles and games. Her playful nature and loyal heart make her an ideal pet for those who can match her enthusiasm and love for life!</p>
+            </div>
+        </section>
+
+        <!-- Details Section (Table) -->
+        <section class="details-section my-4">
+            <h2>Daisy's Profile</h2>
+            <table class="table table-striped">
+                <tr><th>Attribute</th><th>Details</th></tr>
+                <tr><td>Age</td><td>2 years</td></tr>
+                <tr><td>Breed</td><td>Portugese Podengo</td></tr>
+                <tr><td>Gender</td><td>Female</td></tr>
+                <tr><td>Size</td><td>Medium</td></tr>
+                <tr><td>Vaccinations</td><td>Up-to-date</td></tr>
+            </table>
+        </section>
+
+        <!-- Care Requirements Section -->
+        <section class="care-requirements my-4">
+            <h2>Care Requirements</h2>
+            <ul>
+                <li>Daily exercise to match her energy level, including walks and runs</li>
+                <li>Interactive play sessions with toys or puzzles to keep her mentally stimulated</li>
+                <li>Regular grooming to keep her coat clean and healthy</li>
+                <li>Consistent training and positive reinforcement to help her learn new commands</li>
+                <li>A secure yard or outdoor space for her to run and play safely</li>
+            </ul>
+        </section>
+
+        <!-- Optional Fun Facts Section -->
+        <section class="fun-facts my-4">
+            <h2>Fun Facts About Daisy</h2>
+            <ul>
+                <li>Daisy loves to dig and will often create little “burrows” in the garden.</li>
+                <li>She’s an excellent swimmer and loves to cool off in the water on hot days!</li>
+                <li>Her keen nose makes her a natural at scent games, and she loves tracking scents around the yard.</li>
+            </ul>
+        </section>
+
+        <!-- Adoption Information Section -->
+        <section class="adoption-info-section my-4">
+            <h2>Adoption Information</h2>
+            <p><strong>Adoption Fee:</strong> $100 (includes vaccination and microchip)</p>
+            <p>To adopt Daisy, please fill out our <a href="adoption_form.html">Adoption Form</a> and review our adoption requirements.</p>
+        </section>
+
+    </div> 
+    
+    <footer>
+        <p>&copy; 2024 PetLink. All rights reserved.</p>
+        <p>Course: Foundations of Web Development</p>
+        <p>Created by: Merjem Alić</p>
+        <p><a href="terms-and-conditions.html">Terms and Conditions</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/darkmode.js" defer></script>
+</body>
+</html>
